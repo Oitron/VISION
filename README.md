@@ -15,7 +15,7 @@ Use one image plane as new panorama plane. Pull pixels (Apply inverse matrix of 
 ### Usage:  
 User need to click minimum 4 points in each images, once finish selecting corresponding points, click right button. It will generate the panorama.
 ### Example:
-![image](https://github.com/Oitron/VISION/blob/main/Panorama/result.png)
+![image](https://github.com/Oitron/VISION/blob/main/Panorama/result_img/result.png)
 
 ****
 # RANSAC algorithm for Fundamental matrix computation  
