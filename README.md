@@ -43,6 +43,26 @@ Get the disparity map of two images which have already completed epipolar rectif
 Use local method to compute disparity evaluate it by NCC to find the best disparity, then use seeds expansion to fill up the disparity map.  
 ### Usage:   
 Once application start, it will compute first disparity map by no limited on NCC score, which is easily influenced by noise, lack of gradient variation, intensity discontinuities.  
+  
+![image](https://github.com/Oitron/VISION/blob/main/Disparity_map_01/result_img/first_disparity_map.png)  
+  
+Then it will compute disparity map by limited on NCC score (higher then 0.95), of course some places will not get a best value of disparity, these places will be filled up by next step: propagation of seeds.  
+  
+![image](https://github.com/Oitron/VISION/blob/main/Disparity_map_01/result_img/correct_disparity.png)  
+  
+After propagation of seeds we can finally get a not bad disparity map, and also it generate a 3D image to show the effect on disparity map.  
+  
+![image](https://github.com/Oitron/VISION/blob/main/Disparity_map_01/result_img/propagation_of_seeds.png)
+![image](https://github.com/Oitron/VISION/blob/main/Disparity_map_01/result_img/result.png)  
+  
+****
+# Disparity map estimation using Graph Cuts
+### Background:
+Get the disparity map of two images which have already completed epipolar rectification.  
+Using global method to compute disparity by using max flow method to find minimum cut in graph to obtain the disparity map.  
+### Usage:  
+Increase Lambda from 0.1 to 0.5 [0.1, 0.25, 0.5]. The bigger value of Lambda, the more smoother the disparity will be, can reduce the gradient of disparity map, the mesh become more flat.  
+
 
 
 
