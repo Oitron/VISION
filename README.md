@@ -61,7 +61,15 @@ After propagation of seeds we can finally get a not bad disparity map, and also 
 Get the disparity map of two images which have already completed epipolar rectification.  
 Using global method to compute disparity by using max flow method to find minimum cut in graph to obtain the disparity map.  
 ### Usage:  
-Increase Lambda from 0.1 to 0.5 [0.1, 0.25, 0.5]. The bigger value of Lambda, the more smoother the disparity will be, can reduce the gradient of disparity map, the mesh become more flat.  
+Increase **Lambda** from 0.1 to 0.5 [0.1, 0.25, 0.5]. The bigger value of **Lambda**, the more smoother the disparity will be, can reduce the gradient of disparity map, the mesh become more flat.  
+  
+![image](https://github.com/Oitron/VISION/blob/main/Disparity_map_02/result_img/res_01.png)  
+  
+Increase **n (patch radius)** from 3 to 7 [ 3, 5, 7]. The bigger value of **patch radius**, the less noise of disparity map will be, the more smoother surface will be.
+  
+![image](https://github.com/Oitron/VISION/blob/main/Disparity_map_02/result_img/res_02.png)  
+  
+Compare with the local method, the global method is more faster and have a more smoother result.
 
 
 
