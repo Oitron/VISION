@@ -1,5 +1,5 @@
 # VISION
-Practical work on computer vision
+Practical works of Computer Vision
 ### Testing environment:  
 Linux (ubuntu 16.04 LTS)
 ### Dependent packages:
